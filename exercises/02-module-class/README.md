@@ -22,6 +22,7 @@ colorsGenerator.get(2); // returns ['red', 'green']
 colorsGenerator.get(); // returns ['red']
 colorsGenerator.get(1); // returns ['green']
 colorsGenerator.get(1); // returns ['blue']
+colorsGenerator.get(123); // returns all colors, without duplication
 ```
 
 Note:
@@ -43,8 +44,20 @@ Export Class only. Use **default export**.
 Import module in `main.js` and test it. For example
 
 ```ts
+function expect(value) {
+  return {
+    toBe: (expected) => value === expected
+  }
+};
+
 console.log(
-  colorsGenerator.get().length === 1,
-  colorsGenerator.get()[0] === 'green'
+  expect(colorsGenerator.get().length)
+    .toBe(1) // should be true in console
 );
+
+console.log(
+  expect(colorsGenerator.get()[0])
+    .toBe('green') // should be true in console
+);
+...
 ```

@@ -37,10 +37,30 @@ Export only public methods. Use **default export**.
 
 2) Import module
 
-Import module in `main.js` and test it. For example
+Import module in `main.js` and test it. For example:
 
 ```ts
+function expect(value) {
+  return {
+    toBe: (expected) => value === expected
+  }
+};
+
 console.log(
-  getNextColor() === 'red'
+  expect(getNextColor()).toBe('red') // should be true in console
+);
+
+console.log(
+  expect(getNextColor()).toBe('green') // should be true in console
+);
+
+console.log(
+  expect(getNextColor()).toBe('blue') // should be true in console
+);
+
+reset();
+
+console.log(
+  expect(getNextColor()).toBe('red') // should be true in console
 );
 ```

@@ -8,21 +8,15 @@ However, for a huge projects, updating API might be time consuming, can be relat
 
 ___
 
-1) Copy and paste solutions from exercise 01 and 02 (`color-generator.mjs` and `color-generator-v2.0.mjs`).
+1) Copy and paste solution from Exercise 02 (`color-generator-v2.0.mjs`).
 
-2) Implement a Class Adapter:
+2) Copy tests from exercise 01.
+
+3) Implement a functional adapter:
 
 - Adapter should have the same API as `color-generator.mjs` in Exercise 01
 - Imported should be only `color-generator-v2.0.mjs`
 
-Export Class only. Use **default export**.
+Use **default export**.
 
-3) Import Adapter
-
-Import Adapter in `main.js` and test it. For example
-
-```ts
-console.log(
-  getNextColor() === 'red'
-);
-```
+4) Run tests from Exercise 01
