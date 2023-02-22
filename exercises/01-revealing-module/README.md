@@ -37,7 +37,7 @@ Export only public methods. Use **default export**.
 
 2) Import module
 
-Import module in `main.js` and test it. For example:
+Import module in `test.js` and test it. For example:
 
 ```ts
 function expect(value) {

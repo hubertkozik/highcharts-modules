@@ -8,9 +8,9 @@ However, for a huge projects, updating API might be time consuming, can be relat
 
 ___
 
-1) Copy and paste solution from Exercise 02 (`color-generator-v2.0.mjs`).
+1) Copy solution from Exercise 02 (`color-generator-v2.0.mjs`).
 
-2) Copy tests from exercise 01.
+2) Copy tests from Exercise 01.
 
 3) Implement a functional adapter:
 
