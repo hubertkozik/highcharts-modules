@@ -1,24 +1,27 @@
 class ColorsGenerator {
 
-    colors = ['red', 'green', 'blue'];
-    i = 0;
+    #colors = ['red', 'green', 'blue'];
+    index = 0;
 
     constructor() {
     }
 
-    get(n) {
+    get(n = 1) {
+        let startIndex;
         if (n > 1) {
-            return this.colors.slice(0, n);
+            startIndex = 0;
         } else {
-            if (this.i === this.colors.length) {
-                this.i = 0;
+            if (this.index === this.#colors.length) {
+                this.index = 0;
             }
-            return [this.colors[this.i++]];
+            startIndex = this.index;
+            this.index++;
         }
+        return this.#colors.slice(startIndex, startIndex + n);
     }
 
     reset() {
-        this.i = 0;
+        this.index = 0;
     }
 }
 
